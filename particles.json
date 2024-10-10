@@ -1,0 +1,205 @@
+{
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": ["#00ffff", "#ff00ff", "#00ff00", "#0000ff"]
+      },
+      "shape": {
+        "type": ["circle", "triangle", "polygon"],
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": true,
+        "anim": {
+          "enable": true,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 5,
+        "random": true,
+        "anim": {
+          "enable": true,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#00ffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": true,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      },
+      "collisions": {
+        "enable": true,
+        "mode": "bounce"
+      },
+      "twinkle": {
+        "particles": {
+          "enable": true,
+          "color": "#ffffff",
+          "frequency": 0.05,
+          "opacity": 1
+        }
+      },
+      "wobble": {
+        "distance": 5,
+        "enable": true,
+        "speed": {
+          "angle": 50,
+          "move": 10
+        }
+      },
+      "life": {
+        "duration": {
+          "sync": false,
+          "value": 3
+        },
+        "count": 0,
+        "delay": {
+          "random": {
+            "enable": false,
+            "minimumValue": 0
+          },
+          "value": 0,
+          "sync": false
+        }
+      },
+      "roll": {
+        "darken": {
+          "enable": false,
+          "value": 0
+        },
+        "enable": false,
+        "enlighten": {
+          "enable": false,
+          "value": 0
+        },
+        "mode": "vertical",
+        "speed": 25
+      },
+      "rotate": {
+        "random": {
+          "enable": true,
+          "minimumValue": 0
+        },
+        "value": 0,
+        "animation": {
+          "enable": true,
+          "speed": 5,
+          "sync": false
+        },
+        "direction": "random",
+        "path": false
+      },
+      "orbit": {
+        "animation": {
+          "count": 0,
+          "enable": false,
+          "speed": 1,
+          "decay": 0,
+          "sync": false
+        },
+        "enable": false,
+        "opacity": 1,
+        "rotation": {
+          "random": {
+            "enable": false,
+            "minimumValue": 0
+          },
+          "value": 45
+        },
+        "width": 1
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true,
+    "background": {
+      "color": "#000033",
+      "image": "",
+      "position": "50% 50%",
+      "repeat": "no-repeat",
+      "size": "cover"
+    },
+    "fpsLimit": 60,
+    "fullScreen": {
+      "enable": true,
+      "zIndex": -1
+    },
+    "motion": {
+      "disable": false,
+      "reduce": {
+        "factor": 4,
+        "value": true
+      }
+    }
+  }
