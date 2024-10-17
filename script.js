@@ -95,6 +95,7 @@ const questions = [
 let currentQuestions;
 let currentQuestionIndex;
 let score;
+let incorrectAnswers;
 let timeLeft;
 let timerInterval;
 
@@ -128,6 +129,7 @@ function startQuiz() {
     currentQuestions = getRandomQuestions(questions, 5);
     currentQuestionIndex = 0;
     score = 0;
+    incorrectAnswers = 0;
     timeLeft = 300; // 5 minutos
 
     startScreen.style.display = 'none';
@@ -183,6 +185,7 @@ function submitAnswer() {
         score++;
         showFeedback(true, "¡Correcto!");
     } else {
+        incorrectAnswers++;
         showFeedback(false, `Incorrecto. La respuesta correcta es: ${question.correctAnswer}`);
     }
 }
@@ -220,65 +223,48 @@ function nextQuestion() {
         feedbackContainer.style.display = 'none';
         showQuestion();
     } else {
-        showResults();
+        showResults(); // Aquí llamamos a la función para mostrar los resultados
     }
 }
 
 function showResults() {
     clearInterval(timerInterval);
+    
     quizContainer.style.display = 'none';
     feedbackContainer.style.display = 'none';
     resultsContainer.style.display = 'block';
     
+    correctCountElement.textContent = `Respuestas correctas: ${score}`;
+    incorrectCountElement.textContent = `Respuestas incorrectas: ${incorrectAnswers}`;
+    
     const totalQuestions = currentQuestions.length;
-    const incorrectCount = totalQuestions - score;
     const percentage = (score / totalQuestions) * 100;
+    percentageElement.textContent = `Porcentaje de aciertos: ${percentage.toFixed(2)}%`;
     
-    correctCountElement.textContent = score;
-    incorrectCountElement.textContent = incorrectCount;
-    percentageElement.textContent = `${percentage.toFixed(2)}%`;
-    
-    reviewElement.innerHTML = '';
+    reviewElement.innerHTML = ''; // Limpiar cualquier contenido anterior
     currentQuestions.forEach((question, index) => {
         const reviewItem = document.createElement('div');
-        reviewItem.classList.add('review-item');
-        reviewItem.innerHTML = `
-            <h3>Pregunta ${index + 1}</h3>
-            <p><strong>Pregunta:</strong> ${question.question}</p>
-            <p><strong>Respuesta correcta:</strong> ${question.correctAnswer}</p>
-            <p><strong>Explicación:</strong> ${question.explanation}</p>
-        `;
+        reviewItem.textContent = `${index + 1}. ${question.question} - Respuesta correcta: ${question.correctAnswer}`;
         reviewElement.appendChild(reviewItem);
     });
+}
+
+function updateProgressBar() {
+    const progressPercentage = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
+    progressBar.style.width = `${progressPercentage}%`;
+}
+
+function updateTimer() {
+    timeLeft--;
+    timerElement.textContent = `${Math.floor(timeLeft / 60)}:${timeLeft % 60 < 10 ? '0' : ''}${timeLeft % 60}`;
+    
+    if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        showResults();
+    }
 }
 
 function restartQuiz() {
     startScreen.style.display = 'block';
     resultsContainer.style.display = 'none';
 }
-
-function updateProgressBar() {
-    const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
-    progressBar.style.width = `${progress}%`;
-}
-
-function updateTimer() {
-    const minutes = Math.floor(timeLeft / 60);
-    const seconds = timeLeft % 60;
-    timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    
-    if (timeLeft === 0) {
-        clearInterval(timerInterval);
-        showResults();
-    } else {
-        timeLeft--;
-    }
-}
-
-// Inicialización
-document.addEventListener('DOMContentLoaded', () => {
-    startScreen.style.display = 'block';
-    quizContainer.style.display = 'none';
-    feedbackContainer.style.display = 'none';
-    resultsContainer.style.display = 'none';
-});
