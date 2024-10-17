@@ -6,7 +6,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
 // Base de preguntas
 const questions = [
     {
-        question: "¿Cuál es el nombre tradicional del compuesto PbO₂?",
+        question: "¿Cuál es el nombre tradicional del compuesto PbO2",
         options: ["Óxido plumboso", "Óxido de plomo (II)", "Óxido plúmbico", "Dióxido de plomo"],
         correctAnswer: "Óxido plúmbico",
         explanation: "El nombre tradicional del compuesto PbO₂ es óxido plúmbico, que indica el estado de oxidación más alto del plomo en este compuesto.",
@@ -15,14 +15,14 @@ const questions = [
     {
         question: "¿Cómo se llama el compuesto Cu₂O en el sistema stock?",
         options: ["Óxido de cobre (I)", "Óxido de cobre (II)", "Óxido cúprico", "Óxido cuproso"],
-        correctAnswer: "Óxido de cobre (I)",
+        correctAnswer: "Óxido cuproso",
         explanation: "En el sistema Stock, se indica el estado de oxidación del metal entre paréntesis. En Cu₂O, el cobre tiene un estado de oxidación de +1, por lo que se nombra como óxido de cobre (I).",
         molecule: "Cu2O"
     },
     {
-        question: "¿Cuál es el nombre estequiométrico del compuesto P₂O₅?",
-        options: ["Óxido de fósforo (V)", "Pentaóxido de difósforo", "Óxido fosfórico", "Pentóxido de fósforo"],
-        correctAnswer: "Pentaóxido de difósforo",
+        question: "¿Que compuesto tiene la fórmula química P₂O₅ según el sistema tradicional y cómo se nombre en el sistema stock?",
+        options: ["Óxido fosfórico/Óxido de fósforo(V)", "Pentaóxido de difósforo/óxido de fósforo", "Óxido fosfórico(II)/Pentóxido de fósforo", "Pentóxido de fósforo/óxido fosfórico"],
+        correctAnswer: "Óxido fosfórico/Óxido de fósforo(V)",
         explanation: "En la nomenclatura estequiométrica, se indica el número de átomos de cada elemento en el orden en que aparecen en la fórmula. Por lo tanto, P₂O₅ se nombra como pentaóxido de difósforo.",
         molecule: "P2O5"
     },
@@ -146,12 +146,7 @@ const questions = [
         explanation: "El cloruro de sodio tiene la fórmula NaCl, donde Na representa el sodio y Cl el cloro.",
         molecule: "NaCl"
     },
-    {
-        question: "¿Qué nombre recibe el compuesto H2SO4?",
-        options: ["Ácido sulfúrico", "Ácido sulfuroso", "Sulfato de hidrógeno", "Ácido sulfhídrico"],
-        correctAnswer: "Ácido sulfúrico",
-        explanation: "H2SO4 es la fórmula del ácido sulfúrico, un ácido fuerte ampliamente utilizado en la industria.",
-        molecule: "H2SO4"
+    
     },
     {
         question: "¿Cuál es la fórmula química del óxido de aluminio?",
