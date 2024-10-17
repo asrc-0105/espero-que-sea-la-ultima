@@ -15,7 +15,7 @@ const questions = [
     {
         question: "¿Cómo se llama el compuesto Cu₂O en el sistema Stock?",
         options: ["Óxido de cobre (I)", "Óxido de cobre (II)", "Óxido cúprico", "Óxido cuproso"],
-        correctAnswer: "Óxido cuproso",
+        correctAnswer: "Óxido de cobre (I)",
         explanation: "En el sistema Stock, se indica el estado de oxidación del metal entre paréntesis. En Cu₂O, el cobre tiene un estado de oxidación de +1, por lo que se nombra como óxido de cobre (I).",
         molecule: "Cu2O"
     },
@@ -27,11 +27,7 @@ const questions = [
         molecule: "P2O5"
     },
     {
-        question: "¿Cuál es la fórmula correcta del arseniuro de calcio?",
-        options: ["As₂Ca", "Ca₂As", "Ca₃As₂", "As₃Ca₂"],
-        correctAnswer: "Ca₃As₂",
-        explanation: "En el arseniuro de calcio, el calcio tiene un estado de oxidación de +2 y el arsénico de -3. Para balancear las cargas, se necesitan 3 átomos de calcio por cada 2 de arsénico, resultando en Ca₃As₂.",
-        molecule: "Ca3As2"
+       
     },
     {
         question: "¿Cómo se nombra Br₂O₃ según la nomenclatura Stock?",
@@ -62,11 +58,7 @@ const questions = [
         molecule: "NaCl"
     },
     {
-        question: "¿Cuál es el nombre correcto del compuesto H₂O₂?",
-        options: ["Peróxido de hidrógeno", "Agua oxigenada", "Óxido de hidrógeno", "Hidruro de oxígeno"],
-        correctAnswer: "Peróxido de hidrógeno",
-        explanation: "H₂O₂ es la fórmula del peróxido de hidrógeno, también conocido comúnmente como agua oxigenada.",
-        molecule: "H2O2"
+        
     },
     {
         question: "¿Cuál es la fórmula del pentaóxido de dinitrógeno?",
