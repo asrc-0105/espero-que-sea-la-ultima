@@ -25,8 +25,6 @@ const questions = [
         correctAnswer: "Óxido fosfórico/Óxido de fósforo(V)",
         explanation: "En la nomenclatura estequiométrica, se indica el número de átomos de cada elemento en el orden en que aparecen en la fórmula. Por lo tanto, P₂O₅ se nombra como pentaóxido de difósforo.",
         molecule: "P2O5"
-    },
-    {
        
     },
     {
@@ -56,8 +54,6 @@ const questions = [
         correctAnswer: "Cloruro de sodio",
         explanation: "NaCl es la fórmula del cloruro de sodio, comúnmente conocido como sal de mesa, formado por un ion sodio (Na⁺) y un ion cloruro (Cl⁻).",
         molecule: "NaCl"
-    },
-    {
         
     },
     {
